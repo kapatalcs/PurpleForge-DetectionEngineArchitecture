@@ -3,15 +3,11 @@ PurpleForge – Lab Security & Hardening Guide
 
 This document describes the security weaknesses intentionally present in PurpleForge labs and provides defensive mitigation and hardening strategies for each scenario.
 
-The goal is to:
-
-Identify root causes
-
-Assess security impact
-
-Propose remediation strategies
-
-Define residual risk
+**The goal is to**:
+-Identify root causes
+-Assess security impact
+-Propose remediation strategies
+-Define residual risk
 
 
 # Lab-1: Web Login
