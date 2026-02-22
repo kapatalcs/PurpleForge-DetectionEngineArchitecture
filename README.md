@@ -63,7 +63,9 @@ The included threat model documents potential abuse cases, trust
 boundaries, and mitigation strategies.
 
 ### Lab Security Guide
+
 Provides step-by-step guidance on how to safely operate, analyze, and harden the intentionally vulnerable labs, highlighting best practices for mitigating common security risks.
+
 ------------------------------------------------------------------------
 
 ## Usage
