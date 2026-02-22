@@ -6,8 +6,11 @@ This document describes the security weaknesses intentionally present in PurpleF
 **The goal is to**:
 
 -Identify root causes
+
 -Assess security impact
+
 -Propose remediation strategies
+
 -Define residual risk
 
 
