@@ -107,3 +107,52 @@ All dependencies are listed in the `requirements.txt` file.
 
 MIT License
 
+
+
+
+
+
+
+
+
+
+
+graph LR
+    %% Renk ve Stil Tanımlamaları
+    classDef lab fill:#2d3436,stroke:#a29bfe,stroke-width:2px,color:#fff,rx:5px,ry:5px;
+    classDef core fill:#6c5ce7,stroke:#dfe6e9,stroke-width:3px,color:#fff,rx:10px,ry:10px;
+    classDef component fill:#4a3055,stroke:#a29bfe,stroke-width:1px,color:#fff,rx:5px,ry:5px;
+    classDef config fill:#2d3436,stroke:#ffeaa7,stroke-width:1px,color:#fff,stroke-dasharray: 5 5;
+    classDef storage fill:#2d3436,stroke:#00b894,stroke-width:2px,color:#fff,shape:cylinder;
+
+    %% Sol Kısım: Girdi Ortamı
+    subgraph Environment ["🧪 Lab & Simulation Environment"]
+        direction TB
+        L["labs/<br/>(Vulnerable Targets)"]:::lab
+        S["simulations/<br/>(Attack Generator)"]:::lab
+    end
+
+    %% Orta Kısım: Ana Motor
+    subgraph Engine ["⚙️ PurpleForge Detection Engine"]
+        direction LR
+        P["parsers/<br/>(Normalization)"]:::component
+        CORE{"core/<br/>(Orchestration)"}:::core
+        D["detector/<br/>(Rule Matching)"]:::component
+        
+        C["configs/<br/>(Settings)"]:::config
+        M["mapping/<br/>(MITRE ATT&CK)"]:::config
+        
+        P -->|Parsed Data| CORE
+        C -.->|Loads| CORE
+        CORE -->|Evaluates| D
+        M -.->|Context| D
+    end
+
+    %% Sağ Kısım: Çıktı
+    ST["state/<br/>(Alerts & Storage)"]:::storage
+
+    %% Ana Bağlantılar
+    L -->|Raw Logs| P
+    S -->|Telemetry| P
+    D -->|Detection Hits| ST
+
