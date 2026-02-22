@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PurpleForge - Profile Upload</title>
+    <style>
+        body {
+            font-family: Arial;
+            background-color: #111;
+            color: #eee;
+            padding: 40px;
+        }
+        .card {
+            background-color: #1e1e1e;
+            padding: 20px;
+            border-radius: 10px;
+            width: 400px;
+        }
+        input, button {
+            margin-top: 10px;
+            padding: 8px;
+        }
+        a {
+            color: #8a2be2;
+        }
+    </style>
+</head>
+<body>
+
+<h1>PurpleForge Upload Lab</h1>
+
+<div class="card">
+    <h3>Upload Profile Image</h3>
+
+    <form method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <br>
+        <button type="submit">Upload</button>
+    </form>
+
+    <hr>
+
+    <h4>Uploaded Files</h4>
+    <ul>
+        {% for file in files %}
+            <li>
+                <a href="/uploads/{{ file }}" target="_blank">
+                    {{ file | safe }}
+                </a>
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+
+</body>
+</html>

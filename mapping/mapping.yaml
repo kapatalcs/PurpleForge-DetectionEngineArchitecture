@@ -1,0 +1,71 @@
+password_spray:
+  mitre_id: "T1110.003"
+  tactic: "Credential Access"
+  severity: "high"
+  description: "Single IP attempts one common password across multiple accounts"
+
+distributed_password_spray:
+  mitre_id: "T1110.003"
+  tactic: "Credential Access"
+  severity: "high"
+  description: "Multiple IPs attempt one common password across multiple accounts"
+
+credential_stuffing_attack:
+  mitre_id: "T1110.004"
+  tactic: "Credential Access"
+  severity: "high"
+  description: "Single IP attempts multiple stolen username-password pairs"
+
+distributed_credential_stuffing_attack:
+  mitre_id: "T1110.004"
+  tactic: "Credential Access"
+  severity: "high"
+  description: "Multiple IPs attempt multiple stolen username-password pairs"
+
+double_extension:
+  mitre_id: "T1036"
+  tactic: "Defense Evasion"
+  severity: "medium"
+  description: "Malicious file disguised using double extension (e.g., file.php.jpg)"
+
+insecure_direct_object_reference:
+  mitre_id: "T1190"
+  tactic: "Initial Access"
+  severity: "high"
+  description: "Unauthorized access to objects via predictable or manipulable identifiers"
+
+json_web_token_none_algorithm:
+  mitre_id: "T1552"
+  tactic: "Credential Access"
+  severity: "high"
+  description: "JWT validation bypass using 'none' algorithm leading to unauthorized access"
+
+mime_spoofing:
+  mitre_id: "T1036"
+  tactic: "Defense Evasion"
+  severity: "medium"
+  description: "Manipulating MIME type to disguise malicious content"
+
+missing_function_level_access_control:
+  mitre_id: "T1190"
+  tactic: "Initial Access"
+  severity: "high"
+  description: "Accessing restricted functionality due to missing authorization checks"
+
+server_side_request_forgery:
+  mitre_id: "T1190"
+  tactic: "Initial Access"
+  severity: "critical"
+  description: "Server makes unauthorized requests to internal or external resources"
+
+server_side_template_injection:
+  mitre_id: "T1190"
+  tactic: "Execution"
+  severity: "critical"
+  description: "Injection of malicious template expressions leading to remote code execution"
+
+sqli_auth_bypass:
+  mitre_id: "T1190"
+  tactic: "Initial Access"
+  severity: "critical"
+  description: "Injection of malicious SQL queries to manipulate or exfiltrate data from backend database"

@@ -1,0 +1,2 @@
+{"timestamp": "2026-02-22T14:41:16.413930+00:00", "lab": "server_side_request_forgery", "ip": "127.0.0.1", "action": "SUCCESS", "metadata": {"user_input": "http://127.0.0.1:6000/secret"}}
+{"timestamp": "2026-02-22T15:01:51.914921+00:00", "lab": "server_side_request_forgery", "ip": "127.0.0.1", "action": "SUCCESS", "metadata": {"user_input": "http://127.0.0.1:6000/secret"}}

@@ -1,0 +1,72 @@
+attacks:
+  password_spray:
+    lab: web_login
+  
+  distributed_password_spray:
+    lab: web_login
+  
+  credential_stuffing_attack:
+    lab: web_login
+
+  distributed_credential_stuffing_attack:
+    lab: web_login
+  
+  double_extension:
+    lab: insecure_file_upload_with_extension
+  
+  mime_spoofing:
+    lab: insecure_file_upload_with_mime
+  
+  server_side_request_forgery:
+    lab: server_side_request_forgery
+  
+  server_side_template_injection:
+    lab: ssti_access_control
+
+  insecure_direct_object_reference:
+    lab: ssti_access_control
+
+  missing_function_level_access_control:
+    lab: ssti_access_control
+
+  json_web_token_none_algorithm:
+    lab: json_web_token
+  
+
+labs:
+  web_login:
+    type: flask
+    port: 5000
+    log_path: labs/web_login/logs/access.log
+    parser: web_login
+    database_path: labs/web_login/web_login_users.db
+
+  insecure_file_upload_with_extension:
+    type: flask
+    port: 5002
+    log_path: labs/insecure_file_upload_with_extension/logs/access.log
+    parser: insecure_file_upload_with_extension
+  
+  insecure_file_upload_with_mime:
+    type: flask
+    port: 5003
+    log_path: labs/insecure_file_upload_with_mime/logs/access.log
+    parser: insecure_file_upload_with_mime
+
+  server_side_request_forgery:
+    type: flask
+    port: 5001
+    log_path: labs/server_side_request_forgery/logs/access.log
+    parser: server_side_request_forgery
+  
+  ssti_access_control:
+    type: flask
+    port: 5004
+    log_path: labs/ssti_access_control/logs/access.log
+    parser: ssti_access_control
+  
+  json_web_token:
+    type: flask
+    port: 5005
+    log_path: labs/json_web_token/logs/access.log
+    parser: json_web_token
