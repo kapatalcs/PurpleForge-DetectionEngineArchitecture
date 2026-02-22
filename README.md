@@ -75,6 +75,14 @@ Clone the repository:
 
 PurpleForge is intended to be run in an isolated lab environment.
 
+### Running the Engine
+After cloning the repository, navigate to the root directory and run the main CLI:
+```bash
+cd PurpleForge-DetectionEngineArchitecture
+python -m core.cli
+```
+
+
 ------------------------------------------------------------------------
 ## Installation / Requirements
 
